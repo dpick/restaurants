@@ -5,6 +5,9 @@ Rails3MongoidDevise::Application.routes.draw do
 
   devise_for :users
   resources :users, :only => :show
+  resources :restaurants
+  #match 'restaurants/new' => 'restaurants#new'
+  #match 'restaurants/:name' => 'restaurants#show'
 
 
   # The priority is based upon order of creation:
