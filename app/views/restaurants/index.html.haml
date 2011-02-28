@@ -1,4 +1,6 @@
 %h1 restaurant#index
 
 - @restaurants.each do |restaurant|
-  = "Restaurant: #{restaurant.name}"
+  = "Restaurant: "
+  = link_to("#{restaurant.name}", restaurant_path(restaurant))
+  %br/

@@ -4,8 +4,15 @@ Rails3MongoidDevise::Application.routes.draw do
   root :to => "home#index"
 
   devise_for :users
+
   resources :users, :only => :show
-  resources :restaurants
+
+  resources :restaurants do
+    resources :sections do
+      resources :items
+    end
+  end
+
   #match 'restaurants/new' => 'restaurants#new'
   #match 'restaurants/:name' => 'restaurants#show'
 

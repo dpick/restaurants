@@ -1,1 +1,6 @@
 %h1= "Restaurant: #{@restaurant.name}"
+
+- @restaurant.sections do |section|
+  %h1= "#{section.name}"
+  - section.items.each do |item|
+    %h2= "#{item.name} - #{item.price}"

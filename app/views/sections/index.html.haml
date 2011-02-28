@@ -1,0 +1,6 @@
+%h1 section#index
+
+- @sections.each do |section|
+  = "section: "
+  = link_to("#{section.name}", section_path(section))
+  %br/

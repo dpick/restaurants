@@ -13,7 +13,7 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.first(:conditions => {:name => params[:id]})
+    @restaurant = Restaurant.first(:conditions => {:id => params[:id]})
 
     respond_to do |format|
       format.html
