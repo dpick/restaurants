@@ -1,8 +1,7 @@
-= form_for(@restaurant) do |f|
+= form_for([@restaurant, @section]) do |f|
   .field
     = f.label :name
     %br/
     = f.text_field :name
   .actions
     = f.submit
-

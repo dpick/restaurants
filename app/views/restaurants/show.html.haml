@@ -2,5 +2,13 @@
 
 - @restaurant.sections do |section|
   %h1= "#{section.name}"
-  - section.items.each do |item|
-    %h2= "#{item.name} - #{item.price}"
+
+Add Section:
+= form_for([@restaurant, @restaurant.sections.build]) do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .actions
+    = f.submit
+

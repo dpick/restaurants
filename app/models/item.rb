@@ -4,5 +4,5 @@ class Item
   field :name
   field :price, :type => Float
 
-  embedded_in :section, :inverse_of => :item
+  embedded_in :section, :inverse_of => :items
 end

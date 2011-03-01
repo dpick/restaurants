@@ -21,6 +21,10 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def update
+
+  end
+
   def create
     @restaurant = Restaurant.new(params[:restaurant])
 
